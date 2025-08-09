@@ -1,0 +1,36 @@
+>>>> 1. usuarios_em_sg.ps1
+Este script PowerShell lista os membros de um Grupo de Segurança (SG) do Active Directory (nome, sobrenome e e-mail) e salva essas informações em um arquivo CSV. É ótimo para ter um registro rápido de quem está em cada grupo. 📄
+
+>>>> 2. maqs_desabilitadas.ps1
+Este script PowerShell analisa uma Unidade Organizacional (OU) do Active Directory, conta e exibe o total de computadores habilitados e desabilitados, e oferece a opção de exportar a lista de computadores desabilitados para um arquivo TXT.
+
+>>>> 3. habilita_maqs_ad.ps1
+habilita uma conta de computador no Active Directory, verificando e aplicando a alteração em todos os controladores de domínio da rede. Ele garante que, se uma conta estiver desabilitada, ela seja reativada, e informa se já estava habilitada ou não foi encontrada em cada DC. 🖥️🔄 RELAÇÃO DE CONFIANÇA
+
+>>>> 4. del_workstation.ps1
+Este script PowerShell exclui uma conta de computador do Active Directory (AD) e seus objetos filhos em todos os controladores de domínio, após uma confirmação explícita do usuário. Ele garante a remoção completa da máquina da rede.
+
+>>>> 5. usuarios_desab.ps1
+Este script PowerShell conta usuários habilitados e desabilitados em uma Unidade Organizacional (OU) do Active Directory e oferece a opção de exportar a lista de usuários desabilitados para um arquivo TXT. É útil para gerenciar o status das contas de usuário.
+
+>>>> 6. add_sg_dcs(all-dcs).ps1
+Este script PowerShell adiciona um usuário a um Grupo de Segurança (SG) no Active Directory, garantindo que a alteração seja replicada em todos os controladores de domínio da rede. Ele automatiza a inclusão de membros em grupos. 
+
+>>>> 7. mover_maqs_dcs_multi.ps1
+Este script PowerShell move múltiplos computadores no Active Directory para uma OU de destino específica, lendo os nomes de PCs de forma interativa ou de um arquivo TXT. Ele executa a operação em todos os controladores de domínio, gerando um log detalhado e um resumo final do processo. 📂🔄
+
+>>>> 7.1. mover_maqs_dcs.ps1
+ Este script PowerShell move uma conta de computador específica para uma nova Unidade Organizacional (OU) no Active Directory, replicando a alteração em todos os controladores de domínio da rede. É uma ferramenta para reorganizar máquinas no AD.
+
+>>>> 8. add_users_sg_dcs.ps1
+Este script PowerShell adiciona uma lista de usuários (lida de um arquivo TXT) a um Grupo de Segurança (SG) no Active Directory, processando a inclusão em todos os controladores de domínio da rede. Ele automatiza a gestão de membros de grupos.
+
+>>>> 9. get_users_ou.ps1
+Este script PowerShell lista os SamAccountNames (logins) de todos os usuários em uma Unidade Organizacional (OU) específica do Active Directory e salva essa lista em um arquivo de texto, com um login por linha. É ideal para extrair logins de usuários de uma OU.
+
+>>>> 10. users_ou_sem_sg.ps1
+Este script PowerShell identifica usuários em uma OU que não pertencem a um Grupo de Segurança específico e salva seus logins em um arquivo TXT. É útil para auditorias de membros de grupos.
+
+>>>> 11. contar_users_ou.ps1
+Este script PowerShell conta o número de usuários habilitados e desabilitados em uma Unidade Organizacional (OU) específica do Active Directory e exibe um resumo com as contagens, usando cores para facilitar a visualização. 📊
+

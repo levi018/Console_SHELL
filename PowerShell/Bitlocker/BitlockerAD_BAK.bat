@@ -1,0 +1,1 @@
+for /f "tokens=1,2" %%a in ('manage-bde -protectors -get C: -Type recoverypassword ^| findstr ID') do manage-bde -protectors -adbackup c: -id %%b
