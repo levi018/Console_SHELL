@@ -16,10 +16,9 @@ function Carregamento1 {
     )
 
     for ($i = 1; $i -le $TotalSteps; $i++) {
-        # Calcula o percentual
         $percentComplete = [int](($i / $TotalSteps) * 100)
 
-        # Atualiza a barra de progresso
+        # barra de progresso
         Write-Progress -Activity $Activity -Status "$Status - $percentComplete%" -PercentComplete $percentComplete
 
         Start-Sleep -Milliseconds $SleepTime
@@ -297,5 +296,6 @@ do {
     Write-Host "Pressione qualquer tecla para continuar..."
     $null = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
     Clear-Host
+
 
 } while ($true)
