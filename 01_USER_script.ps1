@@ -323,8 +323,6 @@ do {
 Write-Host ""
 Write-Host "Opção de cargo válida selecionada: $NewOU" -ForegroundColor Green
 
-
-
 # Lógica centralizada para mover o usuário
 Write-Host ""
 Write-Host "Opção de cargo válida selecionada: $NewOU" -ForegroundColor Green
@@ -346,9 +344,3 @@ foreach ($DC in $DCs) {
 }
 
 Write-Host "`nScript concluído." -ForegroundColor Green
-
-
-
-
-
-
