@@ -1,4 +1,4 @@
-﻿Clear-Host
+Clear-Host
 ##LETRAS: Calvin S & ANSI Shadow
 #Configurações de Layout
 $host.UI.RawUI.WindowTitle = "CONSOLE POWERSHELL V.1.0"
@@ -16,9 +16,10 @@ function Carregamento1 {
     )
 
     for ($i = 1; $i -le $TotalSteps; $i++) {
+        # Calcula o percentual
         $percentComplete = [int](($i / $TotalSteps) * 100)
 
-        # barra de progresso
+        # Atualiza a barra de progresso
         Write-Progress -Activity $Activity -Status "$Status - $percentComplete%" -PercentComplete $percentComplete
 
         Start-Sleep -Milliseconds $SleepTime
@@ -94,25 +95,17 @@ function users {
                                                               
 
 
+                                     [1] - MOVER USUÁRIOS                              [5] - ADICIONAR SG
 
-        ┌─  ┬  ─┐    ┌┬┐┌─┐┬  ┬┌─┐┬─┐  ┬ ┬┌─┐┌─┐┬─┐                ┌─  ┬  ┬  ─┐  ┌─┐┌┬┐┬┌─┐┬┌─┐┌┐┌┌─┐┬─┐  ┌─┐┌─┐  ┌─┐  ┬ ┬┌┬┐  ┬ ┬┌─┐┌─┐┬─┐    
-        │   │   │    ││││ │└┐┌┘├┤ ├┬┘  │ │└─┐├┤ ├┬┘                │   └┐┌┘   │  ├─┤ ││││  ││ ││││├─┤├┬┘  └─┐│ ┬  ├─┤  │ ││││  │ │└─┐├┤ ├┬┘    
-        └─  ┴  ─┘    ┴ ┴└─┘ └┘ └─┘┴└─  └─┘└─┘└─┘┴└─                └─   └┘   ─┘  ┴ ┴─┴┘┴└─┘┴└─┘┘└┘┴ ┴┴└─  └─┘└─┘  ┴ ┴  └─┘┴ ┴  └─┘└─┘└─┘┴└─    
-        ┌─  ┬┬  ─┐  ┌─┐┌┬┐┬┌─┐┬┌─┐┌┐┌┌─┐┬─┐  ┌─┐   ┌┬┐┌─┐┬┬      ┌─  ┬  ┬┬  ─┐  ┌─┐┌┬┐┬┌─┐┬┌─┐┌┐┌┌─┐┬─┐  ┌─┐┌─┐  ┌┬┐┬ ┬┬  ┌┬┐┬  ┬ ┬┌─┐┌─┐┬─┐┌─┐
-        │   ││   │  ├─┤ ││││  ││ ││││├─┤├┬┘  ├┤ ───│││├─┤││      │   └┐┌┘│   │  ├─┤ ││││  ││ ││││├─┤├┬┘  └─┐│ ┬  ││││ ││   │ │  │ │└─┐├┤ ├┬┘└─┐
-        └─  ┴┴  ─┘  ┴ ┴─┴┘┴└─┘┴└─┘┘└┘┴ ┴┴└─  └─┘   ┴ ┴┴ ┴┴┴─┘    └─   └┘ ┴  ─┘  ┴ ┴─┴┘┴└─┘┴└─┘┘└┘┴ ┴┴└─  └─┘└─┘  ┴ ┴└─┘┴─┘ ┴ ┴  └─┘└─┘└─┘┴└─└─┘
-        ┌─  ┬┬┬  ─┐  ┬─┐┌─┐┌┬┐┌─┐┬  ┬┌─┐┬─┐  ┌─┐   ┌┬┐┌─┐┬┬        ┌─  ┬  ┬┬┬  ─┐  ┬  ┬┌─┐┌┬┐┌─┐┬─┐  ┬ ┬┌─┐┌─┐┬─┐┌─┐  ┌┬┐┌─┐  ┬ ┬┌┬┐┌─┐  ┌─┐┬ ┬
-        │   │││   │  ├┬┘├┤ ││││ │└┐┌┘├┤ ├┬┘  ├┤ ───│││├─┤││        │   └┐┌┘││   │  │  │└─┐ │ ├─┤├┬┘  │ │└─┐├┤ ├┬┘└─┐   ││├┤   │ ││││├─┤  │ ││ │
-        └─  ┴┴┴  ─┘  ┴└─└─┘┴ ┴└─┘ └┘ └─┘┴└─  └─┘   ┴ ┴┴ ┴┴┴─┘      └─   └┘ ┴┴  ─┘  ┴─┘┴└─┘ ┴ ┴ ┴┴└─  └─┘└─┘└─┘┴└─└─┘  ─┴┘└─┘  └─┘┴ ┴┴ ┴  └─┘└─┘
-        ┌─  ┬┬  ┬  ─┐  ┬ ┬┌─┐┌┐ ┬┬  ┬┌┬┐┌─┐┬─┐  ┬ ┬┌─┐┌─┐┬─┐        ┌─  ┬  ┬┬┬┬  ─┐  ┬  ┬┌─┐┌┬┐┌─┐┬─┐  ┬ ┬┌─┐┌─┐┬─┐┌─┐  ┌─┐┌─┐┌┬┐  ┌─┐┌─┐      
-        │   │└┐┌┘   │  ├─┤├─┤├┴┐││  │ │ ├─┤├┬┘  │ │└─┐├┤ ├┬┘        │   └┐┌┘│││   │  │  │└─┐ │ ├─┤├┬┘  │ │└─┐├┤ ├┬┘└─┐  └─┐├┤ │││  └─┐│ ┬      
-        └─  ┴ └┘   ─┘  ┴ ┴┴ ┴└─┘┴┴─┘┴ ┴ ┴ ┴┴└─  └─┘└─┘└─┘┴└─        └─   └┘ ┴┴┴  ─┘  ┴─┘┴└─┘ ┴ ┴ ┴┴└─  └─┘└─┘└─┘┴└─└─┘  └─┘└─┘┴ ┴  └─┘└─┘      
-                                                                                                                                       
-                                                                                                                                       
-                                                                                                                                       
-                        ┌─  ┬─┐ ┬  ─┐  ┬ ┬┌─┐┌┐ ┬┬  ┬┌┬┐┌─┐┌┬┐┌─┐┌─┐  ┌─┐  ┌┬┐┌─┐┌─┐┌─┐┌┐ ┬┬  ┬┌┬┐┌─┐┌┬┐┌─┐┌─┐                                 
-                        │   │┌┴┬┘   │  ├─┤├─┤├┴┐││  │ │ ├─┤ │││ │└─┐  ├┤    ││├┤ └─┐├─┤├┴┐││  │ │ ├─┤ │││ │└─┐                                 
-                        └─  ┴┴ └─  ─┘  ┴ ┴┴ ┴└─┘┴┴─┘┴ ┴ ┴ ┴─┴┘└─┘└─┘  └─┘  ─┴┘└─┘└─┘┴ ┴└─┘┴┴─┘┴ ┴ ┴ ┴─┴┘└─┘└─┘                                 
+                                     [2] - ADICIONAR E-MAIL                            [6] - LISTAR USUÁRIOS DE UMA OU
+
+                                     [3] - REMOVER E-MAIL                              [7] - LISTAR USUÁRIOS SEM SG
+
+                                     [4] - HABILITAR USUÁRIO  
+
+
+                                                                       [0] - VOLTAR     
+
 
 
 "@ -ForegroundColor Red
@@ -120,18 +113,15 @@ $choice = Read-Host "....INSIRA A OPCAO:"
 
         switch ($choice) {
             1 {
-                # Coloque aqui a lógica para listar 
                 Write-Host "Executando: Listar usuários ativos..." -ForegroundColor Green
                 Start-Process powershell -ArgumentList "-NoExit", "-File", (Join-Path $PSScriptRoot "Enable-User.ps1")
-                Start-Sleep -Seconds 2
+                Start-Sleep -Seconds 4
             }
             2 {
-                # Coloque aqui a lógica para criar um novo usuário
                 Write-Host "Executando: Criar novo usuário..." -ForegroundColor Green
                 Start-Sleep -Seconds 2
             }
             3 {
-                # Coloque aqui a lógica para excluir um usuário
                 Write-Host "Executando: Excluir usuário..." -ForegroundColor Green
                 Start-Sleep -Seconds 2
             }
@@ -202,21 +192,16 @@ function computers {
                                                                               
 
 
-┌─  ┬  ─┐    ┌┬┐┌─┐┌─┐┌─┐┌┐ ┬┬  ┬┌┬┐┌─┐┌┬┐┌─┐┌─┐  ┌─┐┌─┐┬─┐  ┌─┐┬ ┬              ┌─  ┬  ┬  ─┐  ┌┬┐┌─┐┬  ┬┌─┐┬─┐  ┌┬┐┌─┐┌─┐┬ ┬┬┌┐┌┌─┐  ┌┬┐┬ ┬┬  ┌┬┐┬
-│   │   │     ││├┤ └─┐├─┤├┴┐││  │ │ ├─┤ ││├─┤└─┐  ├─┘│ │├┬┘  │ ││ │              │   └┐┌┘   │  ││││ │└┐┌┘├┤ ├┬┘  │││├─┤│  ├─┤││││├┤   ││││ ││   │ │
-└─  ┴  ─┘    ─┴┘└─┘└─┘┴ ┴└─┘┴┴─┘┴ ┴ ┴ ┴─┴┘┴ ┴└─┘  ┴  └─┘┴└─  └─┘└─┘              └─   └┘   ─┘  ┴ ┴└─┘ └┘ └─┘┴└─  ┴ ┴┴ ┴└─┘┴ ┴┴┘└┘└─┘  ┴ ┴└─┘┴─┘ ┴ ┴
-┌─  ┬┬  ─┐  ┬ ┬┌─┐┌┐ ┬┬  ┬┌┬┐┌─┐┬─┐  ┌┬┐┌─┐┌─┐┬ ┬┬┌┐┌┌─┐                          ┌─  ┬  ┬┬  ─┐  ┬  ┌─┐┌─┐┌┬┐   ┬┌─┐┬┌┐┌┌─┐┌┬┐  ┬┌┐┌  ┌─┐┬ ┬       
-│   ││   │  ├─┤├─┤├┴┐││  │ │ ├─┤├┬┘  │││├─┤│  ├─┤││││├┤                           │   └┐┌┘│   │  │  ├─┤└─┐ │    ││ │││││├┤  ││  ││││  │ ││ │       
-└─  ┴┴  ─┘  ┴ ┴┴ ┴└─┘┴┴─┘┴ ┴ ┴ ┴┴└─  ┴ ┴┴ ┴└─┘┴ ┴┴┘└┘└─┘                          └─   └┘ ┴  ─┘  ┴─┘┴ ┴└─┘ ┴   └┘└─┘┴┘└┘└─┘─┴┘  ┴┘└┘  └─┘└─┘       
-┌─  ┬┬┬  ─┐  ┌┬┐┌─┐┬  ┌─┐┌┬┐┌─┐  ┬ ┬┌─┐┬─┐┬┌─┌─┐┌┬┐┌─┐┌┐┌┌┬┐┬┌─┐┌┐┌                ┌─  ┬┬  ┬  ─┐  ┌┬┐┌─┐┬  ┬┌─┐┬─┐  ┌┬┐┌─┐┌─┐┬ ┬┬┌┐┌┌─┐            
-│   │││   │   ││├┤ │  ├┤  │ ├┤   ││││ │├┬┘├┴┐└─┐ │ ├─┤│││ │ ││ ││││                │   │└┐┌┘   │  ││││ │└┐┌┘├┤ ├┬┘  │││├─┤│  ├─┤││││├┤             
-└─  ┴┴┴  ─┘  ─┴┘└─┘┴─┘└─┘ ┴ └─┘  └┴┘└─┘┴└─┴ ┴└─┘ ┴ ┴ ┴┘└┘ ┴ ┴└─┘┘└┘                └─  ┴ └┘   ─┘  ┴ ┴└─┘ └┘ └─┘┴└─  ┴ ┴┴ ┴└─┘┴ ┴┴┘└┘└─┘            
-                                                                                                                                                   
-                                                                                                                                                   
-                                                                                                                                                   
-                            ┌─  ┬  ┬┬┬  ─┐  ┬ ┬┬ ┬┌─┐┬─┐┌─┐  ┬┌─┐  ┌┬┐┬ ┬┌─┐  ┌─┐┌─┐┌┬┐┌─┐┬ ┬┌┬┐┌─┐┬─┐┌─┐                                          
-                            │   └┐┌┘││   │  │││├─┤├┤ ├┬┘├┤   │└─┐   │ ├─┤├┤   │  │ ││││├─┘│ │ │ ├┤ ├┬┘ ┌┘                                          
-                            └─   └┘ ┴┴  ─┘  └┴┘┴ ┴└─┘┴└─└─┘  ┴└─┘   ┴ ┴ ┴└─┘  └─┘└─┘┴ ┴┴  └─┘ ┴ └─┘┴└─ o                                           
+
+                                     [1] - EXCLUIR MÁQUINA(S)                       [5] - HABILITAR MÁQUINA(S)
+
+                                     [2] - MOVER MÁQUINA                            [6] - LISTAR MÁQUINAS EM OU
+
+
+                                                       [3] - EM QUAL DC ESTÁ MEU COMPUTADOR?                              
+
+  
+                                                                   [0] - VOLTAR                                           
 
 "@ -ForegroundColor Green
 $choice = Read-Host "....INSIRA A OPCAO:"
@@ -296,6 +281,5 @@ do {
     Write-Host "Pressione qualquer tecla para continuar..."
     $null = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
     Clear-Host
-
 
 } while ($true)
